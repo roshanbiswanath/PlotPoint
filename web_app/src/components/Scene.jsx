@@ -142,7 +142,7 @@ export default function Scene({ onMoviesLoaded, onHover, onSelect, cameraTarget,
       {/* Hover label */}
       {hoveredMovie && (
         <Html
-          position={[hoveredMovie.x, hoveredMovie.y + 4, hoveredMovie.z]}
+          position={[hoveredMovie.x, hoveredMovie.y + 1.5, hoveredMovie.z]}
           center
           style={{ pointerEvents: 'none', whiteSpace: 'nowrap' }}
         >
@@ -166,7 +166,7 @@ export default function Scene({ onMoviesLoaded, onHover, onSelect, cameraTarget,
       {/* Selected label */}
       {selectedMovie && selectedMovie.id !== hoveredId && (
         <Html
-          position={[selectedMovie.x, selectedMovie.y + 4, selectedMovie.z]}
+          position={[selectedMovie.x, selectedMovie.y + 1.5, selectedMovie.z]}
           center
           style={{ pointerEvents: 'none', whiteSpace: 'nowrap' }}
         >
