@@ -99,10 +99,10 @@ def main():
         # Summary - we'll just take the first sentence of overview to act as "ONE concise sentence" if not pre-summarized
         # A simple split by '.' might be crude but usually effective enough for this scale vs full NLP summarization
         overview = str(row['overview']) if pd.notna(row['overview']) else ""
-        summary = overview.split('.')[0] + "." if overview else ""
-        if len(summary) > 200: # specific truncation if first sentence is huge
-             summary = summary[:197] + "..."
-             
+        # summary = overview.split('.')[0] + "." if overview else ""
+        # if len(summary) > 200: # specific truncation if first sentence is huge
+        #      summary = summary[:197] + "..."
+        summary = overview if overview else ""     
         text = (
             f"Title: {row['title']}\n"
             f"Genres: {genres_str}\n"

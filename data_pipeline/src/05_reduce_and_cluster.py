@@ -74,9 +74,8 @@ def main():
     # 4. Clustering (HDBSCAN on PCA space, NOT UMAP)
     print("Running HDBSCAN clustering on PCA space...")
     clusterer = hdbscan.HDBSCAN(
-        min_cluster_size=20,
-        min_samples=1,
-        cluster_selection_epsilon=1.5,
+        min_cluster_size=15, 
+        min_samples=5,
         prediction_data=True
     )
     clusterer.fit(pca_result)
